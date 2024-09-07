@@ -36,7 +36,7 @@ const CreateCampaign = () => {
       if (exists) {
         setIsLoading(true);
         try {
-          const response = await fetch('http://localhost:8081/create-campaign', {
+          const response = await fetch('http://localhost:8082/create-campaign', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

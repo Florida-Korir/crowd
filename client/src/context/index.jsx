@@ -8,7 +8,7 @@ export const StateContextProvider = ({ children }) => {
   // Function to fetch campaigns from the server
   const getCampaigns = async () => {
     try {
-      const response = await fetch('http://localhost:8081/campaigns');
+      const response = await fetch('http://localhost:8082/campaigns');
       
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
