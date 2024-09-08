@@ -68,7 +68,7 @@ async function getAuthRequest(req, res) {
 async function callback(req, res) {
   try {
     const sessionId = req.query.sessionId;
-    const redirectUrl = req.query.redirectUrl; // Get redirect URL from query parameters
+    const redirectUrl = 'http://localhost:5173/'; // Get redirect URL from query parameters
 
     if (!sessionId) {
       return res.status(400).json({ error: "Missing session ID" });

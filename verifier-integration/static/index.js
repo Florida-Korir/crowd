@@ -10,14 +10,14 @@ window.onload = () => {
         fetch(base_url + 'api/sign-in')
             .then(r => Promise.all([Promise.resolve(r.headers.get('x-id')), r.json()]))
             .then(([id, data]) => {
-                console.log(data);
+                console.log('Auth request data:', data);
                 makeQr(qrCodeEl, data);
                 handleDisplay(qrCodeEl, true);
                 handleDisplay(qrBtnEl, false);
                 return id;
             })
             .catch(err => {
-                console.error(err);
+                console.error('Error fetching sign-in data:', err);
                 makeDisabled(qrBtnEl, false); // Re-enable the button on error
             });
     });
@@ -53,19 +53,18 @@ function makeDisabled(el, disabled, cls = 'disabled') {
 function handleCallback(sessionId) {
     fetch(base_url + 'api/callback?sessionId=' + encodeURIComponent(sessionId), {
         method: 'POST',
-        body: JSON.stringify({ /* Add any necessary body data if required */ }),
         headers: {
             'Content-Type': 'application/json'
         }
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data);
-        if (data.success) {
+        console.log('Callback response:', data);
+        if (data.success && data.redirectUrl) {
+            console.log('Redirecting to:', data.redirectUrl);
             window.location.href = data.redirectUrl; // Redirect to the URL provided by the server
         } else {
-            console.error('Verification failed');
-            // Handle verification failure if needed
+            console.error('Verification failed or no redirect URL provided');
         }
     })
     .catch(err => {

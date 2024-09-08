@@ -20,7 +20,7 @@ const cors = require("cors");
 const fs = require("fs");
 
 
-const port = 5002;
+const port = 5000;
 const hostname = "localhost";
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

@@ -31,13 +31,13 @@ const Navbar = () => {
             handleClick={() => navigate('create-campaign')}
           />
         ) : (
-          <a href="http://localhost:8080">
+          <Link to="/create-campaign">
             <CustomButton 
               btnType="button"
-              title="Login/Signup"
+              title="Create Campaign"
               styles="bg-[#8c6dfd]"
             />
-          </a>
+          </Link>
         )}
 
         <Link to="/profile">
@@ -93,13 +93,13 @@ const Navbar = () => {
                 handleClick={() => navigate('create-campaign')}
               />
             ) : (
-              
-                <a href="http://localhost:8080"><CustomButton 
+              <Link to="/create-campaign">
+                <CustomButton 
                   btnType="button"
-                  title="Login/Signup"
+                  title="Create Campaign"
                   styles="bg-[#8c6dfd]"
-                /></a>
-              
+                />
+              </Link>
             )}
           </div>
         </div>
