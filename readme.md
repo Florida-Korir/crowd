@@ -54,6 +54,10 @@ Crowd is a decentralized crowdfunding platform that enables users to launch and 
 - **Payment Integration**: Mpesa Daraja API
 - **SMS Service**: Node.js
 
+## Demo Link
+``https://www.youtube.com/watch?v=kg_p1taUZmQ``
+
+
 ## Contributing
 Pull requests are welcome. For major changes, open an issue to discuss.
 
