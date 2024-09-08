@@ -55,7 +55,7 @@ Crowd is a decentralized crowdfunding platform that enables users to launch and 
 - **SMS Service**: Node.js
 
 ## Demo Link
-``https://www.youtube.com/watch?v=kg_p1taUZmQ``
+(https://www.youtube.com/watch?v=kg_p1taUZmQ)
 
 
 ## Contributing
